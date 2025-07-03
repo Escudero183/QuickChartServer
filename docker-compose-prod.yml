@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  quickchart:
+    image: ghcr.io/typpo/quickchart
+    container_name: quickchart
+    ports:
+      - "3400:3400"
+    environment:
+      - DISABLE_SANDBOX=true
+    restart: unless-stopped
